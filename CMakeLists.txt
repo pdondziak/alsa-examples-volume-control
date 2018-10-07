@@ -1,0 +1,9 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
+
+PROJECT(volumecontrol)
+
+FIND_PACKAGE(ALSA)
+
+ADD_EXECUTABLE(volumecontrol volumecontrol.c)
+
+TARGET_LINK_LIBRARIES(volumecontrol ${ALSA_LIBRARIES})
